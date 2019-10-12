@@ -1,7 +1,7 @@
 version: '3'
 services:
   cp-kafka-connect:
-    image: robcowart/cp-kafka-connect-custom:5.3.1_0.0.2
+    image: robcowart/cp-kafka-connect-custom:5.3.1_0.0.3_community
     container_name: cp-kafka-connect
     restart: unless-stopped
     network_mode: bridge
