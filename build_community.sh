@@ -14,4 +14,4 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --squash -f ./community.Dockerfile -t robcowart/cp-kafka-connect-custom:5.3.1_0.0.3_community .
+docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --squash -f ./community.Dockerfile -t robcowart/cp-kafka-connect-custom:5.3.1_0.0.4_community .
