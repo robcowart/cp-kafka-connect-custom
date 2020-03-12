@@ -14,4 +14,4 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --squash -f ./confluent.Dockerfile -t robcowart/cp-kafka-connect-custom:5.4.0_1.0.0_confluent .
+docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --squash -f ./confluent.Dockerfile -t robcowart/cp-kafka-connect-custom:5.4.1_1.0.1_confluent .
