@@ -14,7 +14,7 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-FROM confluentinc/cp-kafka-connect-base:5.5.0
+FROM confluentinc/cp-kafka-connect-base:6.0.0
 
 ARG BUILD_DATE
 
@@ -23,35 +23,35 @@ LABEL org.opencontainers.image.created="$BUILD_DATE" \
       org.opencontainers.image.url="https://hub.docker.com/r/robcowart/cp-kafka-connect-custom" \
       org.opencontainers.image.documentation="https://github.com/robcowart/cp-kafka-connect-custom/README.md" \
       org.opencontainers.image.source="https://github.com/robcowart/cp-kafka-connect-custom" \
-      org.opencontainers.image.version="5.5.0_1.0.2_lab" \
+      org.opencontainers.image.version="6.0.0_1.0.3_lab" \
       org.opencontainers.image.vendor="Robert Cowart" \
       org.opencontainers.image.title="cp-kafka-connect-custom" \
       org.opencontainers.image.description="A custom Confluent Platform Kafka Connect container with additional connectors from Confluent Hub."
 
-RUN confluent-hub install --no-prompt confluentinc/connect-transforms:1.3.2 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-avro-converter:5.5.0 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-elasticsearch:5.5.0 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-s3:5.5.0 && \
-    confluent-hub install --no-prompt blueapron/kafka-connect-protobuf-converter:3.1.0 && \
-    confluent-hub install --no-prompt debezium/debezium-connector-mongodb:1.1.0 && \
-    confluent-hub install --no-prompt debezium/debezium-connector-mysql:1.1.0 && \
-    confluent-hub install --no-prompt debezium/debezium-connector-postgresql:1.1.0 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-json-schema:0.0.2.1 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-memcached:0.1.0.12 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-redis:0.0.2.11 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-common:0.1.0.35 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-fix:0.1.0.1 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-maxmind:0.1.0.10 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-xml:0.1.0.18 && \
-    confluent-hub install --no-prompt jcustenborder/kafka-connect-twitter:0.3.33 && \
-    confluent-hub install --no-prompt mongodb/kafka-connect-mongodb:1.0.1 && \
-    confluent-hub install --no-prompt neo4j/kafka-connect-neo4j:1.0.7 && \
-    confluent-hub install --no-prompt splunk/kafka-connect-splunk:1.2.0 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-cassandra:1.2.0 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-http:1.0.10 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-influxdb:1.1.2 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-mqtt:1.2.3 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-rabbitmq:1.2.0 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-replicator:5.5.0 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-s3-source:1.2.2 && \
-    confluent-hub install --no-prompt confluentinc/kafka-connect-sftp:1.0.4
+RUN confluent-hub install --no-prompt confluentinc/connect-transforms:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-avro-converter:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-elasticsearch:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-s3:latest && \
+    confluent-hub install --no-prompt blueapron/kafka-connect-protobuf-converter:latest && \
+    confluent-hub install --no-prompt debezium/debezium-connector-mongodb:latest && \
+    confluent-hub install --no-prompt debezium/debezium-connector-mysql:latest && \
+    confluent-hub install --no-prompt debezium/debezium-connector-postgresql:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-json-schema:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-memcached:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-redis:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-common:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-fix:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-maxmind:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-transform-xml:latest && \
+    confluent-hub install --no-prompt jcustenborder/kafka-connect-twitter:latest && \
+    confluent-hub install --no-prompt mongodb/kafka-connect-mongodb:latest && \
+    confluent-hub install --no-prompt neo4j/kafka-connect-neo4j:latest && \
+    confluent-hub install --no-prompt splunk/kafka-connect-splunk:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-cassandra:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-http:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-influxdb:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-mqtt:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-rabbitmq:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-replicator:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-s3-source:latest && \
+    confluent-hub install --no-prompt confluentinc/kafka-connect-sftp:latest
